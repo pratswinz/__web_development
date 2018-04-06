@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>The global function (myFunction) returns the product of the arguments (a ,b):</p>
+
+<p id="demo"></p>
+
+<script>
+function forLetMethod(data) {
+	var _this = this;
+    _this.i = 10;
+	var i = 13;
+	console.log("I::"+i);
+	innerMethod();
+	function innerMethod(){
+		var i = 15;
+		console.log("I inner::"+i);
+		for(var i = 49;i<51;i++){
+			console.log("I inside for::"+_this.i);
+		}
+		console.log("I after for::"+_this.i);
+	}
+}
+
+console.log(forLetMethod());
+</script>
+
+</body>
+</html>
+

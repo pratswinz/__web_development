@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>The global function (myFunction) returns the product of the arguments (a ,b):</p>
+
+<p id="demo"></p>
+
+<script>
+    let twoSum = (array, sum) => {
+	let hashMap = {},
+      results = []
+  
+		for (let i = 0; i < array.length; i++){
+			if (hashMap[array[i]]){
+				results.push([hashMap[array[i]], array[i]])
+			}else{
+				hashMap[sum - array[i]] = array[i];
+			}
+		  }
+		  return results;
+	}
+console.log(twoSum([10,20,10,40,50,60,70,30],50));
+</script>
+
+</body>
+</html>
+

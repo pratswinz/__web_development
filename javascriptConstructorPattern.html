@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>The global function (myFunction) returns the product of the arguments (a ,b):</p>
+
+<p id="demo"></p>
+
+<script>
+// constructor function to create car objects
+function car(make, model, year) {
+    this.make   = make;
+    this.model  = model;
+    this.year   = year;
+    this.sayCar = function() {
+        alert('I have a ' + this.year + ' ' + this.make + ' ' + this.model + '.');
+    };
+}
+
+// create 2 car objects for John and Jane
+var johnCar = new car('Ford', 'F150', '2011'),
+    janeCar = new car('Audi', 'A4', '2007');
+
+// call method on Jane's car
+janeCar.sayCar();
+
+</script>
+
+</body>
+</html>
+

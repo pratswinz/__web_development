@@ -1,0 +1,22 @@
+The hashcode of a Java Object is simply a number, it is 32-bit signed int, that allows an object to be 
+managed by a hash-based data structure. We know that hash code is an unique id number allocated to an object by JVM. 
+But actually speaking, Hash code is not an unique number for an object. If two objects are equals then these two objects should return same hash code. 
+So we have to implement hashcode() method of a class in such way that if two objects are equals, ie compared by equal() method of that class,
+then those two objects must return same hash code. 
+If you are overriding hashCode you need to override equals method also.
+
+
+
+
+
+var arrPrint = function(arr){
+	foreach(item in arr){
+		if(Object.prototype.toString.call( item )=== '[object Array]'){
+			arrPrint(item);
+		}else{
+			console.log(item);
+		}
+	}			
+}
+
+arrPrint([1,3,'sum',[4,90,[35,76],95],8,33]);

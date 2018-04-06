@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>The global function (myFunction) returns the product of the arguments (a ,b):</p>
+
+<p id="demo"></p>
+
+<script type="text/javascript">// Split the array into halves and merge them recursively 
+'use strict';
+
+class LinkedList {
+
+  constructor() {
+    this.head = null;
+  }
+
+  insertNodeAtTail(val) {
+    var node = {
+      data: val,
+      next: null
+    };
+
+    if (!this.head) {
+      this.head = node;
+    } else {
+      var p1 = this.head;
+      while (p1.next) {
+        p1 = p1.next;
+      }
+      p1.next = node;
+    }
+  }
+
+  deleteNode(val) {
+    // If linked list is empty
+    if (!this.head) {
+      console.log('Linked list is empty.');
+      return;
+    }
+    // if you have to delete the head
+    if (this.head.data === val) {
+      this.head = this.head.next;
+    } else {
+      var p1 = this.head;
+      var p2 = p1.next;
+      while (p2) {
+        if (p2.data === val) {
+          p1.next = p2.next;
+          break;
+        } else {
+          p1 = p2;
+        }
+        p2 = p2.next;
+      }
+    }
+  }
+}
+// Create an instance of a LinkedList class
+var L1 = new LinkedList();
+
+// Create a linked list with six elements
+L1.insertNodeAtTail(5);
+L1.insertNodeAtTail(6);
+L1.insertNodeAtTail(7);
+L1.insertNodeAtTail(8);
+L1.insertNodeAtTail(9);
+L1.insertNodeAtTail(10);
+console.log(L1);
+
+// Delete a head and a tail node
+L1.deleteNode(5);
+L1.deleteNode(10);
+console.log(L1);
+
+// Delete  an intermediate node
+L1.deleteNode(7);
+console.log(L1);
+</script>
+
+</body>
+</html>
+

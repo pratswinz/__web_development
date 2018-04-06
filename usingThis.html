@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>The global function (myFunction) returns the product of the arguments (a ,b):</p>
+
+<p id="demo"></p>
+
+<script>
+var b = 1;
+function outer(){
+    var b = 2;
+	console.log(b);
+    function inner(){
+        b++;
+		console.log(b);
+        var b = 3;
+        console.log(b);
+    }
+    inner();
+}
+outer();
+</script>
+
+</body>
+</html>
+
+
